@@ -1,0 +1,26 @@
+<!-- repository_details.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repository Details</title>
+  </head>
+  <body>
+    <h1>Repository Details</h1>
+    <ul>
+      {% for repository in repositories %}
+      <li>
+        <strong>Name:</strong> {{ repository.name }}<br />
+        <strong>Full Name:</strong> {{ repository.full_name }}<br />
+        <strong>Private:</strong> {{ repository.private }}<br />
+        <strong>HTML URL:</strong>
+        <a href="{{ repository.html_url }}">{{ repository.html_url }}</a><br />
+        <strong>Description:</strong> {{ repository.description }}<br />
+        <strong>Created At:</strong> {{ repository.created_at }}<br />
+        <strong>Updated At:</strong> {{ repository.updated_at }}<br />
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
