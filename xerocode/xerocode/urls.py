@@ -16,6 +16,6 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path('github/', include('github_connect.urls')),
+    path('', include('github_connect.urls')),
     path('api/', include('cluster_data.urls')),
 ]

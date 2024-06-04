@@ -4,8 +4,14 @@ from django.http import JsonResponse, HttpResponseBadRequest,HttpResponse
 from .models import Repository
 from requests.exceptions import RequestException
 import requests
+from django.shortcuts import render
+
 def hello_world(request):
-  return HttpResponse('<h1>Xero code task </h1>')
+    context = {
+        'title': 'Xero Code Task',
+    }
+    return render(request, 'hello_world.html', context)
+
 def github_login(request):
   client_id = settings.GITHUB_CLIENT_ID
   redirect_uri = request.build_absolute_uri('/github/callback')
