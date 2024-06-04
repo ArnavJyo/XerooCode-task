@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-c@c&nmvf98xt@gmxl9r*^iu7-vmk6nt_v1+f&)3db9i%m&m&2!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','https://xeroocode-task.onrender.com']
+ALLOWED_HOSTS = ['*','https://xeroocode-task.onrender.com','0.0.0.0']
 load_dotenv()  # Load environment variables from .env file
 
 # Now you can access environment variables using os.environ
