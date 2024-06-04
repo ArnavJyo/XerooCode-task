@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
-from django.http import JsonResponse, HttpResponseBadRequest
+from django.http import JsonResponse, HttpResponseBadRequest,HttpResponse
 from .models import Repository
 from requests.exceptions import RequestException
 import requests
-
+def hello_world(request):
+  return HttpResponse('<h1>Xero code task </h1>')
 def github_login(request):
   client_id = settings.GITHUB_CLIENT_ID
   redirect_uri = request.build_absolute_uri('/github/callback')
