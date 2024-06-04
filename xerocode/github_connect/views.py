@@ -57,4 +57,4 @@ def github_callback(request):
 
 def display_repository_details(request):
   repositories = Repository.objects.all()
-  return render(request, 'C:/Users/arnav/Desktop/Xerocode-task/XerooCode-task/xerocode/github_connect/templates/github_details.html', {'repositories': repositories})
+  return render(request, 'github_details.html', {'repositories': repositories})
