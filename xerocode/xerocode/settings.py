@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,9 +27,11 @@ SECRET_KEY = 'django-insecure-c@c&nmvf98xt@gmxl9r*^iu7-vmk6nt_v1+f&)3db9i%m&m&2!
 DEBUG = True
 
 ALLOWED_HOSTS = []
+load_dotenv()  # Load environment variables from .env file
 
-GITHUB_CLIENT_ID = 'Iv23lihRBYlPVmkaodOu'
-GITHUB_CLIENT_SECRET = '4cfc9abd9b33c5a2218d819f832098656ac0b905'
+# Now you can access environment variables using os.environ
+GITHUB_CLIENT_ID = os.environ.get('GITHUB_CLIENT_ID')
+GITHUB_CLIENT_SECRET = os.environ.get('GITHUB_CLIENT_SECRET')
 
 # Application definition
 
